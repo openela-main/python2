@@ -1,0 +1,11 @@
+diff -ru Python-2.7.18-orig/Lib/test/test_pty.py Python-2.7.18/Lib/test/test_pty.py
+--- Python-2.7.18-orig/Lib/test/test_pty.py	2020-04-19 17:13:39.000000000 -0400
++++ Python-2.7.18/Lib/test/test_pty.py	2021-11-09 20:07:31.720743017 -0500
+@@ -78,6 +78,7 @@
+     def handle_sig(self, sig, frame):
+         self.fail("isatty hung")
+ 
++    @unittest._skipInRpmBuild('sometimes fails in Koji, possibly due to a mock issue (rhbz#714627)')
+     def test_basic(self):
+         try:
+             debug("Calling master_open()")
