@@ -1,0 +1,12 @@
+diff -Naur Python-2.7.17-orig/Lib/platform.py Python-2.7.17/Lib/platform.py
+--- Python-2.7.17-orig/Lib/platform.py     2019-10-19 18:38:44.000000000 +0000
++++ Python-2.7.17/Lib/platform.py          2021-12-11 16:01:35.000000000 +0000
+@@ -291,7 +291,7 @@
+ # and http://www.die.net/doc/linux/man/man1/lsb_release.1.html
+ 
+ _supported_dists = (
+-    'SuSE', 'debian', 'fedora', 'redhat', 'centos',
++    'SuSE', 'debian', 'fedora', 'redhat', 'centos', 'openela',
+     'mandrake', 'mandriva', 'rocks', 'slackware', 'yellowdog', 'gentoo',
+     'UnitedLinux', 'turbolinux')
+ 
