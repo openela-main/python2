@@ -104,7 +104,7 @@ Summary: An interpreted, interactive, object-oriented programming language
 Name: %{python}
 # Remember to also rebase python2-docs when changing this:
 Version: 2.7.18
-Release: 13%{?dist}.2
+Release: 15%{?dist}
 License: Python
 Group: Development/Languages
 Requires: %{python}-libs%{?_isa} = %{version}-%{release}
@@ -918,6 +918,7 @@ This package contains files used to embed Python 2 into applications.
 Summary: Libraries and header files needed for Python 2 development
 Group: Development/Libraries
 Requires: %{python}%{?_isa} = %{version}-%{release}
+Requires: %{name}-libs%{?_isa} = %{version}-%{release}
 Requires: python-rpm-macros
 Requires: python2-rpm-macros
 Requires: pkgconfig
@@ -992,6 +993,7 @@ user interface for Python 2 programming.
 Summary: The test modules from the main python2 package
 Group: Development/Languages
 Requires: %{name} = %{version}-%{release}
+Requires: %{name}-libs%{?_isa} = %{version}-%{release}
 
 %description test
 
@@ -2113,12 +2115,12 @@ fi
 # ======================================================
 
 %changelog
-* Wed Sep 27 2023 Charalampos Stratakis <cstratak@redhat.com> - 2.7.18-13.2
+* Wed Sep 27 2023 Charalampos Stratakis <cstratak@redhat.com> - 2.7.18-15
 - Security fix for CVE-2023-40217
-Resolves: RHEL-9620
+Resolves: RHEL-9621
 
-* Thu May 25 2023 Charalampos Stratakis <cstratak@redhat.com> - 2.7.18-13.1
-- Fix for CVE-2023-24329
+* Thu Jul 20 2023 Charalampos Stratakis <cstratak@redhat.com> - 2.7.18-14
+- Security fix for CVE-2023-24329
 Resolves: rhbz#2173917
 
 * Thu Feb 16 2023 Josef Ridky <jridky@redhat.com> - 2.7.18-13
